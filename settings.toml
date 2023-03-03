@@ -1,0 +1,8 @@
+[Time]
+start_date="2020-01-01"
+end_date="2021-01-01"
+[Playlist]
+playlist_names=["First Automated","Second Automated"]
+num_of_tracks=100
+set_preferences_flag=false
+
