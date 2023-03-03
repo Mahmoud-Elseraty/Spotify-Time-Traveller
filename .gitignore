@@ -1,6 +1,6 @@
 
 # Ignore dynaconf secret files
-.secrets.*
+
 testTr.*
 main.ipynb
 secret.py
