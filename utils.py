@@ -1,6 +1,8 @@
 import pandas as pd
 import spotipy
 import random
+import numpy as np
+from sklearn.cluster import KMeans
 from config import settings
 
 
@@ -59,5 +61,11 @@ def get_recommended_tracks(current_account,track_ids,num_of_tracks,**kwargs):
         recommendation_names.extend(list(map(lambda x:x.get("name"),sample_rec)))
     return recommendation_ids,recommendation_names
 
-
+def cluster_user_audio(current_account,track_ids):
+    selection=["danceability","energy","speechiness","acousticness","instrumentalness","liveness"]
+    features=current_account.audio_features(track_ids)
+    filtered_selection=[f.get(s) for f in features for s in selection]
+    filtered_selection=np.array(filtered_selection).reshape(int(len(filtered_selection)/len(selection)),len(selection))
+    filtered_selection
+    kmeans = KMeans(n_clusters=3, random_state=0).fit(filtered_selection)
 
