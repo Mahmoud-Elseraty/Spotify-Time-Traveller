@@ -68,4 +68,6 @@ def cluster_user_audio(current_account,track_ids):
     filtered_selection=np.array(filtered_selection).reshape(int(len(filtered_selection)/len(selection)),len(selection))
     filtered_selection
     kmeans = KMeans(n_clusters=3, random_state=0).fit(filtered_selection)
-
+    clusters = [[] for i in range(3)]
+    for i, label in enumerate(kmeans.labels_):
+        clusters[label].append(track_ids[i])
