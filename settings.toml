@@ -1,8 +1,14 @@
 [Time]
-start_date="2020-01-01"
-end_date="2021-01-01"
-[Playlist]
-playlist_names=["First Automated","Second Automated"]
-num_of_tracks=100
-set_preferences_flag=false
+start_date = "2020-01-01"
+end_date = "2020-06-30"
 
+[Playlist]
+playlist_names = ["First Automated", "Second Automated"]
+num_of_tracks = 25
+
+[Engine]
+max_seeds = 25
+similar_per_seed = 20
+max_per_artist = 4
+exclude_library = true
+include_playlists = true

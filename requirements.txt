@@ -1,0 +1,5 @@
+dynaconf==3.3.5
+spotipy==2.26.0
+requests==2.34.2
+rich
+pytest

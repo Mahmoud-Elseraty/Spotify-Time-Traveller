@@ -4,3 +4,11 @@
 testTr.*
 main.ipynb
 secret.py
+.secrets.toml
+.cache
+.cache-*
+.venv/
+__pycache__/
+.pytest_cache/
+.tt_cache/
+test.ipynb
